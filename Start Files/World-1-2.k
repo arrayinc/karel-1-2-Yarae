@@ -10,13 +10,10 @@ import "turns";
 function FillPotholes(){
    move();
    fillPothole();
-   move();
-   move();
-   move();
+   moveThree();
    fillPothole();
    move();
 }
-
 
 function fillPothole(){
    turnRight();
@@ -25,4 +22,10 @@ function fillPothole(){
    turnAround();
    move();
    turnRight();
+}
+
+function moveThree(){
+   move();
+   move();
+   move();
 }
