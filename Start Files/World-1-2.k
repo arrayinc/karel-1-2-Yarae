@@ -6,7 +6,7 @@
 
 import "turns";
    
-
+   
 function FillPotholes(){
    move();
    fillPothole();
@@ -15,14 +15,22 @@ function FillPotholes(){
    move();
 }
 
-function fillPothole(){
-   turnRight();
-   move();
-   putBeeper();
+
+function fillPothole() {
+   if(rightIsClear()){
+      turnRight();
+      move();
+
+   if(noBeepersPresent()){
+      putBeeper();
+   }
+
    turnAround();
    move();
    turnRight();
+   }
 }
+
 
 function moveThree(){
    move();
